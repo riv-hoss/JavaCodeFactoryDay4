@@ -96,14 +96,19 @@ public class Main {
     // ---------------------------------------- A7 ------------------------------------------------
 
     public static void printArrayInReverse(){
-        int[] myArray;
+/*        int[] myArray = {};
+        List<Integer>myList = new ArrayList<Integer>(Arrays.asList(myArray));
         Scanner in = new Scanner(System.in);
         System.out.println("Please enter 10 numbers: ");
-        int num1 = in.nextInt();
-        int num2 = in.nextInt();
+        int i = 0;
+        while(i<10){
+            int num = in.nextInt();
+            myList.add(num);
+        }
+        myArray = myList.toArray(myArray);
 
 
-        System.out.println(num1 + " " + num2);
+        System.out.println(Arrays.toString(myArray));*/
 
     }
 
@@ -112,19 +117,38 @@ public class Main {
 
     // ---------------------------------------- A8 ------------------------------------------------
 
-
+    public static void arrayAvg(int[] myArray){
+            double sum = 0.0;
+            for(int i: myArray){
+                sum = sum + i;
+            }
+        System.out.printf("Average is: %.2f", sum/myArray.length);
+    }
 
 
 
     // ---------------------------------------- A9 ------------------------------------------------
 
-
+    public static void indexFinder(int[] myArray, int t){
+        int i = 0;
+        while(i< myArray.length){
+            if(myArray[i] == t){
+                System.out.printf("Index of the element %d is '%d'.", t, i);
+            }
+            i++;
+        }
+    }
 
 
 
     // ---------------------------------------- A10 ------------------------------------------------
 
-
+    public static void removeElement(int item){
+        Integer[] myArray = {1,2,3,4,5,6,7,8,9};
+        ArrayList<Integer> arrayList = new ArrayList<>(Arrays.asList(myArray));
+        arrayList.remove(Integer.valueOf(item));
+        System.out.println(arrayList);
+    }
 
 
 
@@ -142,6 +166,12 @@ public class Main {
 
 
     public static void main(String[] args) {
-        oddNumInYourRange();
+
+        // A8
+        int[] aa = {1,2,3, 7, 8, 17};
+        indexFinder(aa, 9);
+
+        // A9
+        removeElement(2);
     }
 }
