@@ -48,14 +48,14 @@ public class Main {
     // ---------------------------------------- A4 ------------------------------------------------
 
     public static void sumCal(){
+        int result = 0;
         Scanner in = new Scanner(System.in);
         System.out.print("Until what? ");
         int inp = in.nextInt();
         for(int i = 1; i <= inp; i++){
-            int result = 0;
             result = result +i;
-            System.out.printf("Sum is %d", result);
         }
+        System.out.printf("Sum is %d.", result);
     }
 
 
